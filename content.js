@@ -20,7 +20,7 @@ window.KESKIN_COPY = {
     menuClose: "Menüyü kapat",
     heroEyebrow: "TED ÜNİVERSİTESİ · CMPE491 · 2026–27",
     heroLineOne: "Daha net",
-    heroLineTwo: "Daha isabetli?",
+    heroLineTwo: "Daha mı isabetli?",
     heroDescription: "KESKİN, süper çözünürlük tekniklerinin SAR görüntülerinde nesne tespitine katkısını araştırıyor. Görüntüdeki değişimi ve tespit başarımını birlikte değerlendirmeyi amaçlıyoruz.",
     heroExplore: "Projeyi keşfet",
     heroStatus: "Proje önerisi hazırlanıyor",
