@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://ilkeozcendek.github.io/keskin/"><strong>Explore the website ↗</strong></a> &nbsp; · &nbsp;
+  <a href="https://ilkeozcendek.github.io/keskin/"><strong>Explore the website</strong></a> &nbsp; · &nbsp;
   <a href="#the-research-question">Research</a> &nbsp; · &nbsp;
   <a href="#research-in-progress">Roadmap</a> &nbsp; · &nbsp;
   <a href="#the-keskin-team">Team</a>

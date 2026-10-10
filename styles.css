@@ -38,7 +38,7 @@
  .nav-links{display:block}
  #main-nav a{display:flex;align-items:center;gap:16px;min-height:52px;font:550 17px/1.4 var(--display);padding:13px 0;border-bottom:1px solid var(--line);white-space:normal}
  #main-nav .nav-index{display:block;min-width:22px;font:500 11px/1 var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
- #main-nav a:after{content:'↗';position:static;margin-left:auto;width:auto;height:auto;background:none;transform:none;font:400 20px/1 var(--body);color:var(--muted)}
+ #main-nav a:after{display:none}
  #main-nav a[aria-current]{color:var(--blue)}
 
  html[data-menu-open=true] #main-nav{animation:menu-appear .2s ease-out}
@@ -595,4 +595,21 @@
  .back-top .back-top-icon path:first-child,
  .back-top:is(:hover,:focus-visible) .back-top-icon path:first-child{transform:none}
  .back-top .back-top-icon path:last-child{display:none}
+}
+
+/* Device-independent line icons; no text glyphs can become platform emoji. */
+.ui-icon{display:block;width:24px;height:24px;flex-shrink:0;pointer-events:none}
+.round-arrow .ui-icon{width:26px;height:26px}
+.compare-grip .ui-icon{width:24px;height:24px}
+.choice-arrow{display:block;line-height:0}
+.choice-arrow .ui-icon{width:100%;height:auto;aspect-ratio:1}
+.faq-toggle .ui-icon{width:20px;height:20px}
+.nav-arrow{display:none}
+@media(max-width:980px){
+ #main-nav .nav-arrow{display:block;width:20px;height:20px;margin-left:auto;color:var(--muted)}
+ #main-nav a[aria-current] .nav-arrow{color:var(--blue)}
+}
+@media(max-width:680px){
+ .primary-link .round-arrow .ui-icon{width:21px;height:21px}
+ .compare-grip .ui-icon{width:26px;height:26px}
 }
