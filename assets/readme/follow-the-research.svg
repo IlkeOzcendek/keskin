@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">Follow the research — Visit the KESKİN website</title><desc id="desc">A cobalt orbital line and arrow accompany the invitation to explore the project website.</desc>
+<defs><linearGradient id="bg"><stop stop-color="#102940"/><stop offset="1" stop-color="#0c1b2b"/></linearGradient><linearGradient id="line"><stop stop-color="#78a9ff" stop-opacity="0"/><stop offset=".5" stop-color="#78a9ff"/><stop offset="1" stop-color="#78a9ff" stop-opacity="0"/></linearGradient></defs>
+<style>text{font-family:Inter,Arial,Helvetica,sans-serif}.trace{stroke-dasharray:70 440;animation:trace 9s linear infinite}@keyframes trace{to{stroke-dashoffset:-510}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect x="1" y="1" width="1198" height="208" rx="22" fill="url(#bg)" stroke="#355170"/>
+<path d="M665 209C709 128 768 37 896 38S1034 183 1140 129 1198 15 1200 1" stroke="#2f5076"/>
+<path class="trace" d="M665 209C709 128 768 37 896 38S1034 183 1140 129 1198 15 1200 1" stroke="#78a9ff" stroke-width="2"/>
+<text x="48" y="57" fill="#9fb9db" font-size="15" letter-spacing="2.3">KESKİN / RESEARCH IN PROGRESS</text>
+<text x="46" y="116" fill="#eff5fb" font-size="44" font-weight="600" letter-spacing="-1.4">Follow the research</text>
+<text x="48" y="163" fill="#adc4e0" font-size="20">ilkeozcendek.github.io/keskin</text>
+<circle cx="1098" cy="105" r="40" fill="#183c67" stroke="#689eea"/><path d="M1085 117 1112 91m-27 0h27v27" stroke="#a5c8ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

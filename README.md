@@ -1,55 +1,134 @@
-# KESKİN
+<div align="center">
+  <a href="https://ilkeozcendek.github.io/keskin/">
+    <picture>
+      <source media="(prefers-reduced-motion: reduce) and (max-width: 640px)" srcset="./assets/readme/keskin-hero-mobile-still.svg" />
+      <source media="(prefers-reduced-motion: reduce)" srcset="./assets/readme/keskin-hero-still.svg" />
+      <source media="(max-width: 640px)" srcset="./assets/readme/keskin-hero-mobile.svg" />
+      <img src="./assets/readme/keskin-hero.svg" width="100%" alt="KESKİN — More detail. Better detection? An animated, illustrative radar scene with a resolution divider and detection brackets." />
+    </picture>
+  </a>
+</div>
 
-Radar uydu görüntülerinde süper çözünürlük ve nesne tespiti araştırması için proje sitesi.
+<p align="center">
+  <strong>Improving Object Detection Performance in SAR Imagery<br />Using Super-Resolution Techniques</strong>
+</p>
 
-Site yayınlanmaya hazır HTML, CSS ve JavaScript dosyalarından oluşur. Kurulum, derleme veya sunucu uygulaması gerekmez. İlk ziyaret İngilizce ve koyu temada açılır; dil ve tema seçimleri hatırlanır.
+<p align="center">
+  <a href="https://ilkeozcendek.github.io/keskin/"><strong>Explore the website ↗</strong></a> &nbsp; · &nbsp;
+  <a href="#the-research-question">Research</a> &nbsp; · &nbsp;
+  <a href="#research-in-progress">Roadmap</a> &nbsp; · &nbsp;
+  <a href="#the-keskin-team">Team</a>
+</p>
 
-## Mobil kullanım
+## The research question
 
-- Üstteki dil ve tema düğmeleri tek dokunuşla değişir. Fareyle üzerine gelince hafif ışık, dokununca basılma geri bildirimi verir.
-- Menü, tüm bölümlere geçiş sunar. Dil ve tema üst çubuktan değiştirilir; menü kapanınca okuduğun konum korunur.
-- Görsel karşılaştırmasındaki ayırıcı ilk göründüğünde iki kez hafifçe hareket eder ve iki yana dalga yayarak durur. Dokunulduğunda ipucu hemen sona erer; ayırıcı sürüklenebilir veya klavyenin ok tuşlarıyla kullanılabilir.
-- Görüntü kalitesi ve nesne tespiti sekmeleri arasında metinler yumuşakça değişir; seçili sekme işareti kayar ve içerik alanının yüksekliği sabit kalır.
-- Küçük ayrıntılar ve yoğun sahneler seçiminde aynı temsili görüntü küçük bir tekneye yaklaşır veya limanın geneline açılır. Seçili satır, ok ve görseldeki odak işaretleri yumuşak geçişlerle değişir.
-- Yol haritasındaki dört aşama çember ve bağlantı çizgileriyle gösterilir. Mevcut aşama proje önerisidir; sonraki aşamalar planlanıyor olarak kalır. Çember ve adımlar ilk göründüklerinde kısa bir giriş hareketi yapar.
-- Sorular yumuşak bir geçişle açılıp kapanır. Azaltılmış hareket tercihi açıksa bu hareketler gösterilmez.
-- Telefonlarda yöntem adımları tek sütunda, açıklamalar daha okunaklı boyutta gösterilir.
+**Does a clearer image lead to better object detection?**
 
-## Dosyalar
+KESKİN investigates the relationship between **super-resolution** and **object detection** in synthetic aperture radar (SAR) imagery. We want to understand when additional image detail helps a detector find and locate objects, where it offers limited benefit, and what tradeoffs emerge.
 
-- `index.html`: ana sayfa ve bölümler
-- `styles.css`: görünüm, animasyonlar ve ekran uyumu
-- `content.js`: Türkçe ve İngilizce metinler
-- `app.js`: dil, tema, karşılaştırma ve menü etkileşimleri
-- `assets/`: görseller ve site simgesi
-- `.nojekyll`: GitHub Pages için statik dosya ayarı
-- `.gitignore`: bilgisayara özel gereksiz dosyaları dışarıda tutar
+Developed at **TED University** for **CMPE491 · 2026–27**, the project is currently at the proposal stage. This repository hosts its public website; research code and experimental results have not been published here yet.
 
-## Site ve depo
+## From imagery to evidence
 
-- Site: [ilkeozcendek.github.io/keskin](https://ilkeozcendek.github.io/keskin/)
-- Kaynak kodu: [IlkeOzcendek/keskin](https://github.com/IlkeOzcendek/keskin)
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (max-width: 640px)" srcset="./assets/readme/research-flow-mobile-still.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/readme/research-flow-still.svg" />
+  <source media="(max-width: 640px)" srcset="./assets/readme/research-flow-mobile.svg" />
+  <img src="./assets/readme/research-flow.svg" width="100%" alt="Proposed comparison: the same SAR input is evaluated through direct object detection and through super-resolution followed by detection. Both detection paths are compared; image quality is assessed separately." />
+</picture>
 
-Site GitHub Pages üzerinden sunulur. Yayın kaynağı `main` dalının kök dizinidir (`/`). Derleme veya paket kurulumu gerekmez; `.nojekyll` dosyası statik dosyaların doğrudan yayınlanmasını sağlar.
+1. **Prepare the data** — Review open SAR sources, select a suitable dataset, and define image pairs and the evaluation setup.
+2. **Increase resolution** — Compare at least two deep learning super-resolution architectures, selected after the literature review.
+3. **Detect objects** — Evaluate low-resolution and super-resolved inputs within the same detection evaluation setup.
+4. **Measure the effect** — Examine image quality and detection performance separately, then report their relationship and limitations.
 
-## Siteyi güncelleme
+### Two perspectives, one research question
 
-1. İlgili HTML, CSS veya JavaScript dosyasını düzenle.
-2. `index.html` dosyasını tarayıcıda açarak kontrol et.
-3. Değişiklikleri bu deponun `main` dalına gönder.
-4. GitHub Pages yayını otomatik olarak günceller. Yayın durumunu deponun **Actions** veya **Settings → Pages** bölümünden takip edebilirsin.
+| Image quality | Object detection |
+| :--- | :--- |
+| How do detail and structure change? | Does that change help find and locate objects? |
+| Compare outputs with reference imagery and selected quality measures. | Compare detection outcomes across the same evaluation setup. |
 
-Yeni belgeler eklerken yalnızca paylaşılmaya hazır dosyaları depoya koy ve Belgeler bölümündeki bağlantıları güncelle. Temsili görseller, model çıktıları ve gerçek deney sonuçları birbirinden açıkça ayrılmalıdır.
+We are particularly interested in **small objects**, where useful detail is limited, and **busy scenes**, where nearby objects and complex backgrounds may make detection harder.
 
-## Görseller ve içerik
+## Research in progress
 
-Radar görseli yapay zekâyla üretilmiş temsili bir sahnedir. Gerçek SAR verisi, model çıktısı veya ölçülmüş deney sonucu değildir. Site içindeki temsili görsel açıklamaları korunmuştur. Raporlar hazır olduğunda Belgeler bölümüne eklenebilir.
+| Stage | Focus | Status |
+| :--- | :--- | :--- |
+| **01 · Project proposal** | Research question, scope, and initial references | **In preparation** |
+| **02 · Experiment design** | Dataset, architectures, and evaluation measures | Planned |
+| **03 · Implementation** | Super-resolution and detection comparisons | Planned |
+| **04 · Analysis & sharing** | Findings, limitations, and project outputs | Planned |
 
-Sora ve Manrope yazı tipleri Google Fonts üzerinden yüklenir; yüklenemediklerinde yedek yazı tipi kullanılır. Görseller, stiller ve betikler göreli yollarla bağlandığı için proje adı içeren GitHub Pages adresleriyle uyumludur.
+Dataset, model, and metric choices have not been finalized. No experimental results have been published. The website’s Documents section will host materials as they become available.
 
-Canonical adresi ve sosyal paylaşım etiketleri GitHub Pages adresini kullanır.
+## The website
 
-## Resmî rehberler
+A visual introduction to the research, built with **HTML, CSS, JavaScript, and SVG** and published through **GitHub Pages**.
 
-- [GitHub Pages nedir?](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
-- [Yayın kaynağını ayarlama](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+- **Explore the idea** with a draggable resolution comparison and separate image-quality and detection views.
+- **Look closer** with animated small-detail and busy-scene exploration.
+- **Follow the work** through the research roadmap, project archive, team, and questions.
+- **Make it yours** with English/Turkish content, dark/light themes, and a responsive layout.
+
+New visitors start in **English and dark mode**. The site remembers language and theme preferences, supports keyboard navigation, and respects reduced-motion settings.
+
+<details>
+<summary><strong>Take a look at the live website</strong></summary>
+<br />
+<a href="https://ilkeozcendek.github.io/keskin/">
+  <img src="./assets/readme/website-preview.png" width="100%" alt="The KESKİN website in its default dark theme, showing the research question and an illustrative SAR comparison." />
+</a>
+</details>
+
+<details>
+<summary><strong>Run locally & navigate the source</strong></summary>
+
+### Local preview
+
+```bash
+git clone https://github.com/IlkeOzcendek/keskin.git
+cd keskin
+```
+
+Open `index.html` in your browser. No package installation or build step is required.
+
+### Repository map
+
+| File | Purpose |
+| :--- | :--- |
+| [`index.html`](index.html) | Page structure and research sections |
+| [`content.js`](content.js) | English and Turkish content |
+| [`styles.css`](styles.css) | Typography, themes, layout, and motion |
+| [`app.js`](app.js) | Language, theme, menu, and interactive comparisons |
+| [`assets/`](assets/) | Website imagery and favicon |
+| [`assets/readme/`](assets/readme/) | Original animated SVGs and website preview |
+| [`.nojekyll`](.nojekyll) | Static publishing configuration for GitHub Pages |
+
+GitHub Pages publishes the root of `main`. Push website changes to that branch to update the live site; deployment progress appears in [Actions](https://github.com/IlkeOzcendek/keskin/actions).
+
+The site uses Sora and Manrope from Google Fonts, with local fallback fonts. README illustrations are self-contained SVGs with no external font or animation service dependency.
+
+</details>
+
+<a name="the-keskin-team"></a>
+
+## The KESKİN Team
+
+| Busenur Arlı | İlke Özçendek | Zeynep Ersoy |
+| :---: | :---: | :---: |
+| Research team | Research team | Research team |
+
+**Project adviser:** Prof. Dr. Gökçe Nur Yılmaz  
+**TED University · CMPE491 · 2026–27**
+
+<sub>The website’s radar-like harbor image is AI-generated. That image, the README illustrations, and the example detection boxes explain the research concept; they are not real SAR data, model outputs, or measured results.</sub>
+
+<br /><br />
+
+<a href="https://ilkeozcendek.github.io/keskin/">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/readme/follow-the-research-still.svg" />
+    <img src="./assets/readme/follow-the-research.svg" width="100%" alt="Follow the research — visit the KESKİN website at ilkeozcendek.github.io/keskin." />
+  </picture>
+</a>
