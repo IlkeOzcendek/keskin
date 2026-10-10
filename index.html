@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0e1c2b">
+  <meta name="description" content="KESKİN: a TED University CMPE491 capstone project investigating super-resolution and object detection in SAR imagery.">
+  <title>KESKİN — Super-Resolution and Object Detection in SAR Imagery</title>
+  <meta property="og:title" content="KESKİN — More detail, better detection?">
+  <meta property="og:description" content="Research connecting SAR imagery and object detection.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://ilkeozcendek.github.io/keskin/">
+  <meta property="og:url" content="https://ilkeozcendek.github.io/keskin/">
+  <meta property="og:image" content="https://ilkeozcendek.github.io/keskin/assets/radar-harbor.png">
+  <meta property="og:image:alt" content="Illustrative radar-like harbor scene, not experimental SAR data">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..700&family=Sora:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/radar-harbor.png">
+  <link rel="stylesheet" href="styles.css">
+  <script>try{var mode=localStorage.getItem('keskin-theme');document.documentElement.dataset.theme=mode==='light'||mode==='dark'?mode:'dark';}catch(e){}</script>
+  <script defer src="content.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
+  <div class="reading-track" aria-hidden="true"><div id="reading-progress"></div></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="KESKİN home" data-i18n-aria="brandAria">KESKİN</a>
+      <nav id="main-nav" aria-label="Main navigation" data-i18n-aria="navAria">
+        <p class="menu-heading" data-i18n="menuHeading">Explore KESKİN</p>
+        <div class="nav-links">
+          <a href="#question" data-nav><span class="nav-index" aria-hidden="true">01</span><span data-i18n="navProject">Project</span></a>
+          <a href="#approach" data-nav><span class="nav-index" aria-hidden="true">02</span><span data-i18n="navMethod">Method</span></a>
+          <a href="#evidence" data-nav><span class="nav-index" aria-hidden="true">03</span><span data-i18n="navEvidence">Evaluation</span></a>
+          <a href="#roadmap" data-nav class="mobile-nav-only"><span class="nav-index" aria-hidden="true">04</span><span data-i18n="navRoadmap">Roadmap</span></a>
+          <a href="#documents" data-nav><span class="nav-index" aria-hidden="true">05</span><span data-i18n="navDocuments">Documents</span></a>
+          <a href="#team" data-nav><span class="nav-index" aria-hidden="true">06</span><span data-i18n="navTeam">Team</span></a>
+          <a href="#faq" data-nav class="mobile-nav-only"><span class="nav-index" aria-hidden="true">07</span><span data-i18n="navFaq">Questions</span></a>
+        </div>
+      </nav>
+      <div class="header-controls">
+        <div class="segmented theme-control" role="group" aria-label="Appearance" data-i18n-aria="themeLabel"><button type="button" data-set-theme="light" aria-pressed="false" data-i18n="themeLight">Light</button><button type="button" data-set-theme="dark" aria-pressed="true" data-i18n="themeDark">Dark</button></div>
+        <div class="segmented language-control" role="group" aria-label="Language" data-i18n-aria="languageLabel"><button type="button" lang="tr" data-set-lang="tr" aria-pressed="false" aria-label="Türkçe">TR</button><button type="button" lang="en" data-set-lang="en" aria-pressed="true" aria-label="English">EN</button></div>
+        <button class="mobile-control mobile-language" type="button" id="mobile-language-toggle" aria-label="Türkçeye geç"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"/></svg><span data-current-language>EN</span></button>
+        <button class="mobile-control" type="button" id="mobile-theme-toggle" data-current-theme="dark" aria-label="Switch to light mode"><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 14A9 9 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg></button>
+        <button type="button" id="menu-toggle" aria-label="Open menu" data-i18n-aria="menuOpen" aria-controls="main-nav" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <button id="menu-backdrop" type="button" hidden aria-label="Close menu" data-i18n-aria="menuClose" tabindex="-1"></button>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-orbit" aria-hidden="true"><div></div><i></i></div>
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow" data-i18n="heroEyebrow">TED UNIVERSITY · CMPE491 · 2026–27</p>
+          <h1 id="hero-title"><span data-i18n="heroLineOne">More detail</span><span class="accent" data-i18n="heroLineTwo">Better detection?</span></h1>
+          <p class="hero-description" data-i18n="heroDescription">KESKİN investigates how super-resolution techniques affect object detection in SAR imagery. We aim to evaluate changes in image quality alongside detection performance.</p>
+          <div class="hero-actions"><a class="primary-link" href="#question"><span class="round-arrow" aria-hidden="true">↗</span><span data-i18n="heroExplore">Explore the project</span></a></div>
+        </div>
+        <div class="hero-scene" id="hero-scene" role="img" aria-label="An illustrative radar visual reflecting KESKİN's remote sensing theme." data-i18n-aria="heroImageAlt">
+          <div class="scene-world">
+            <div class="radar-plane">
+              <img src="assets/radar-harbor.png" alt="" fetchpriority="high" width="1536" height="1024">
+              <div class="hero-low"><canvas data-pixelate data-source="assets/radar-harbor.png" data-pixel-size="16" aria-hidden="true"></canvas></div>
+              <div class="scan-line" aria-hidden="true"></div>
+              <span class="detection-box box-a" aria-hidden="true"></span><span class="detection-box box-b" aria-hidden="true"></span><span class="detection-box box-c" aria-hidden="true"></span>
+            </div>
+            <div class="detail-lift" aria-hidden="true"><div class="detail-image"></div><span class="detail-wire"></span></div>
+          </div>
+          <span class="visual-caption" data-i18n="visualLabel">Illustrative image</span>
+        </div>
+        <div class="hero-foot"><span class="hero-status"><i aria-hidden="true"></i><span data-i18n="heroStatus">Project proposal in preparation</span></span></div>
+      </div>
+    </section>
+
+    <section class="question-section" id="question" aria-labelledby="question-title">
+      <div class="question-visual reveal"><img src="assets/radar-harbor.png" alt="" width="1536" height="1024" loading="lazy"><span class="question-marker" aria-hidden="true"></span><div class="question-crop" aria-hidden="true"></div></div>
+      <div class="container question-layout"><div class="question-copy reveal"><p class="eyebrow"><span>01 / </span><span data-i18n="questionEyebrow">RESEARCH QUESTION</span></p><h2 id="question-title" data-i18n="questionTitle">Does a clearer image lead to better detection?</h2><p data-i18n="questionBody">This question is at the centre of our research. We plan to compare super-resolution methods applied to low-resolution SAR imagery and examine how changes in image quality translate into object detection performance.</p><span class="blue-rule" aria-hidden="true"></span><p class="image-note" data-i18n="visualDisclaimerShort">Illustrative imagery; not actual SAR data or a model output.</p></div></div>
+    </section>
+
+    <section class="flow-section section-pad" id="approach" aria-labelledby="method-title">
+      <div class="container"><div class="section-heading reveal"><p class="eyebrow"><span>02 / </span><span data-i18n="methodEyebrow">RESEARCH APPROACH</span></p><h2 id="method-title" data-i18n="methodTitle">From data to evaluation</h2></div>
+        <ol class="method-flow">
+          <li><div class="method-object"><div class="method-plane low-plane"><canvas data-pixelate data-source="assets/radar-harbor.png" data-pixel-size="12" aria-hidden="true"></canvas></div><span class="flow-node" aria-hidden="true"></span></div><h3 data-i18n="method1Title">01 / Prepare the data</h3><p data-i18n="method1Body">Review open SAR data sources and select a suitable dataset; prepare low- and high-resolution image pairs and the evaluation setup.</p></li>
+          <li><div class="method-object"><div class="method-plane"><img src="assets/radar-harbor.png" width="1536" height="1024" alt="" loading="lazy"></div><span class="flow-node" aria-hidden="true"></span></div><h3 data-i18n="method2Title">02 / Increase resolution</h3><p data-i18n="method2Body">Compare at least two deep learning super-resolution architectures. The models will be selected following the literature review and dataset selection.</p></li>
+          <li><div class="method-object"><div class="method-plane"><img src="assets/radar-harbor.png" width="1536" height="1024" alt="" loading="lazy"><span class="detection-box box-a"></span><span class="detection-box box-b"></span><span class="detection-box box-c"></span></div><span class="flow-node" aria-hidden="true"></span></div><h3 data-i18n="method3Title">03 / Detect objects</h3><p data-i18n="method3Body">Evaluate object detection on low-resolution and super-resolved images, examining how image processing affects the detection task.</p></li>
+          <li><div class="method-object paired"><div class="method-plane back-plane"><img src="assets/radar-harbor.png" width="1536" height="1024" alt="" loading="lazy"></div><div class="method-plane front-plane"><img src="assets/radar-harbor.png" width="1536" height="1024" alt="" loading="lazy"></div></div><h3 data-i18n="method4Title">04 / Measure the effect</h3><p data-i18n="method4Body">Evaluate image quality and object detection with separate measures; report the observed differences, limitations and potential gains together.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="evaluation-section section-pad" id="evidence" aria-labelledby="compare-title">
+      <div class="container"><div class="evaluation-heading reveal"><div><p class="eyebrow"><span>03 / </span><span data-i18n="compareEyebrow">EXPLORE THE APPROACH</span></p><h2 id="compare-title" data-i18n="compareTitle">Take a closer look</h2></div></div>
+        <div class="evaluation-layout">
+          <div class="comparison-component reveal"><div class="compare-stage" id="compare-stage" style="--split:48%">
+              <img src="assets/radar-harbor.png" alt="An illustrative grayscale image created to explain resolution comparison; it is not an experimental result." data-i18n-alt="compareImageAlt" width="1536" height="1024" loading="lazy">
+              <canvas class="compare-low" data-pixelate data-source="assets/radar-harbor.png" data-pixel-size="14" data-fit="fill" aria-hidden="true"></canvas>
+              <div class="compare-boxes" aria-hidden="true"><span class="detection-box box-a"></span><span class="detection-box box-b"></span><span class="detection-box box-c"></span></div>
+              <div class="compare-labels"><span data-i18n="compareInputLabel">Low resolution · illustrative</span><span data-i18n="compareOutputLabel">Super-resolution · illustrative</span></div>
+              <div class="compare-divider" aria-hidden="true">
+                <svg class="compare-ripples" viewBox="-100 -60 200 120" fill="none">
+                  <g class="compare-ripple-left"><path d="M-34-12Q-43 0-34 12"/><path d="M-45-21Q-59 0-45 21"/><path d="M-58-30Q-78 0-58 30"/></g>
+                  <g class="compare-ripple-right"><path d="M34-12Q43 0 34 12"/><path d="M45-21Q59 0 45 21"/><path d="M58-30Q78 0 58 30"/></g>
+                </svg>
+                <span>↔</span>
+              </div>
+              <input id="comparison" type="range" min="8" max="92" value="48" aria-label="Divider position in the illustrative image comparison" data-i18n-aria="compareRangeAria">
+            </div>
+            <p class="illustration-note" data-i18n="compareDisclaimer">This is an illustrative demonstration of the approach. The images and detection boxes are not actual model outputs or experimental results.</p></div>
+          <div class="evidence-content reveal"><p class="eyebrow" data-i18n="evidenceEyebrow">TWO PERSPECTIVES</p><h3 data-i18n="evidenceTitle">Image quality and detection performance</h3>
+            <div class="evidence-tabs" role="tablist" aria-label="Evaluation focus" data-i18n-aria="evidenceTabsAria"><button type="button" id="tab-quality" role="tab" data-evidence-tab="quality" aria-selected="true" aria-controls="panel-quality" data-i18n="evidenceQualityTab">Image quality</button><button type="button" id="tab-detection" role="tab" data-evidence-tab="detection" aria-selected="false" aria-controls="panel-detection" data-i18n="evidenceDetectionTab">Object detection</button></div>
+            <div class="evidence-panels">
+              <div id="panel-quality" role="tabpanel" aria-labelledby="tab-quality" data-evidence-panel="quality"><h4 data-i18n="evidenceQualityTitle">How does the image change?</h4><p data-i18n="evidenceQualityBody">We plan to examine changes in detail and structure in super-resolution outputs using reference images and image quality measures to be selected.</p></div>
+              <div id="panel-detection" role="tabpanel" aria-labelledby="tab-detection" data-evidence-panel="detection" hidden><h4 data-i18n="evidenceDetectionTitle">How does that change affect detection?</h4><p data-i18n="evidenceDetectionBody">We plan to compare different image inputs within the same evaluation setup to examine changes in finding and locating objects.</p></div>
+            </div>
+            <p class="pending-note"><span class="status-dot" aria-hidden="true"></span><span data-i18n="evidencePending">Evaluation is being planned. No experimental results have been published yet.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contexts-section section-pad" id="contexts" aria-labelledby="contexts-title"><div class="container"><div class="section-heading reveal"><p class="eyebrow"><span>04 / </span><span data-i18n="contextsEyebrow">NEW QUESTIONS</span></p><h2 id="contexts-title" data-i18n="contextsTitle">Where might the model struggle?</h2><p class="section-intro" data-i18n="contextsIntro">Two example situations we would like to examine in our experiments. These are research questions, not observed model failures.</p></div>
+      <div class="contexts-layout"><div class="context-image-frame" data-example-view="detail" id="context-image-frame">
+  <div class="context-image-scene">
+    <img id="example-image" src="assets/radar-harbor.png" width="1536" height="1024" alt="A close-up of a small ship in an illustrative harbor scene." data-i18n-alt="context1Alt" loading="lazy">
+    <svg class="context-targets" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true">
+      <g class="context-focus-target"><path d="M876 785h-12v12m0 53v12h12m73 0h12v-12m0-53v-12h-12"/></g>
+      <g class="context-wide-targets"><path d="M936 301h-23v23m0 39v23h23m153 0h23v-23m0-39v-23h-23"/><path d="M1122 473h-24v24m0 18v24h24m98 0h24v-24m0-18v-24h-24"/></g>
+    </svg>
+  </div>
+  <div class="context-view-label" aria-hidden="true"><span data-example-label="detail" data-i18n="context1Title">Small details</span><span data-example-label="context" data-i18n="context2Title">Busy scenes</span></div>
+  <span class="context-image-label" data-i18n="visualLabel">Illustrative image</span>
+</div><div class="context-choices"><button type="button" class="context-choice" aria-controls="context-image-frame" data-example="detail" data-src="assets/radar-harbor.png" data-alt-key="context1Alt" aria-pressed="true"><span class="choice-num">01</span><span><strong data-i18n="context1Title">Small details</strong><span data-i18n="context1Body">When an object occupies very little of an image, will super-resolution make it easier to distinguish? We want to examine the relationship between visible detail and correct detection.</span></span><span class="choice-arrow" aria-hidden="true">↗</span></button><button type="button" class="context-choice" aria-controls="context-image-frame" data-example="context" data-src="assets/radar-harbor.png" data-alt-key="context2Alt" aria-pressed="false"><span class="choice-num">02</span><span><strong data-i18n="context2Title">Busy scenes</strong><span data-i18n="context2Body">How will detection change when objects are close together or the background is complex? We want to examine whether increased resolution helps separate objects and where errors may arise.</span></span><span class="choice-arrow" aria-hidden="true">↗</span></button><p class="illustration-note" data-i18n="contextsDisclaimer">These scenarios are illustrative; they do not represent the measured performance of an existing model.</p></div></div>
+    </div></section>
+
+    <section class="roadmap-section section-pad" id="roadmap" aria-labelledby="roadmap-title"><div class="container roadmap-layout"><div class="roadmap-heading reveal"><p class="eyebrow"><span>05 / </span><span data-i18n="navRoadmap">Roadmap</span></p><h2 id="roadmap-title" data-i18n="roadmapTitle">As the research progresses</h2><div class="roadmap-orbit" aria-hidden="true">
+  <svg class="roadmap-orbit-drawing" viewBox="0 0 320 320" fill="none">
+    <circle class="roadmap-orbit-measure" cx="160" cy="160" r="153" />
+    <g class="roadmap-orbit-geometry">
+      <circle class="roadmap-orbit-track" cx="160" cy="160" r="132" pathLength="100" />
+      <ellipse class="roadmap-orbit-plane" cx="160" cy="160" rx="59" ry="132" transform="rotate(-35 160 160)" />
+      <ellipse class="roadmap-orbit-plane roadmap-orbit-plane-secondary" cx="160" cy="160" rx="132" ry="48" transform="rotate(-35 160 160)" />
+    </g>
+    <path class="roadmap-orbit-ticks" d="M160 3v9M308 160h9M160 308v9M3 160h9" />
+  </svg>
+  <span class="roadmap-orbit-node roadmap-orbit-node-current" style="--node-x:20.83%;--node-y:20.83%;--node-delay:.12s">01</span>
+  <span class="roadmap-orbit-node" style="--node-x:79.17%;--node-y:20.83%;--node-delay:.22s">02</span>
+  <span class="roadmap-orbit-node" style="--node-x:79.17%;--node-y:79.17%;--node-delay:.32s">03</span>
+  <span class="roadmap-orbit-node" style="--node-x:20.83%;--node-y:79.17%;--node-delay:.42s">04</span>
+  <div class="roadmap-orbit-center">
+    <span class="roadmap-orbit-caption" data-i18n="roadmapCurrent">Current stage</span>
+    <div class="roadmap-orbit-index"><strong>01</strong><span>/ 04</span></div>
+    <span class="roadmap-orbit-title" data-i18n="roadmap1Title">Project proposal</span>
+  </div>
+</div></div>
+      <ol class="roadmap-list"><li class="current road-step" aria-current="step"><span class="road-number">01</span><div class="road-copy"><div class="road-step-top"><span class="road-status" data-i18n="roadmapCurrent">Current stage</span><svg class="road-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div><h3 data-i18n="roadmap1Title">Project proposal</h3><p data-i18n="roadmap1Body">We are bringing together the research question, project scope and initial references.</p></div></li><li class="road-step"><span class="road-number">02</span><div class="road-copy"><div class="road-step-top"><span class="road-status" data-i18n="roadmapPlanned">Planned</span><svg class="road-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 16l9 5 9-5"/></svg></div><h3 data-i18n="roadmap2Title">Data and experiment design</h3><p data-i18n="roadmap2Body">The dataset, super-resolution architectures and evaluation measures will be selected.</p></div></li><li class="road-step"><span class="road-number">03</span><div class="road-copy"><div class="road-step-top"><span class="road-status" data-i18n="roadmapPlanned">Planned</span><svg class="road-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/></svg></div><h3 data-i18n="roadmap3Title">Implementation and comparison</h3><p data-i18n="roadmap3Body">The methods will be implemented and their effects on image quality and object detection compared.</p></div></li><li class="road-step"><span class="road-number">04</span><div class="road-copy"><div class="road-step-top"><span class="road-status" data-i18n="roadmapPlanned">Planned</span><svg class="road-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v17h17M8 15l4-5 4 2 5-7"/></svg></div><h3 data-i18n="roadmap4Title">Analysis and sharing</h3><p data-i18n="roadmap4Body">Results, limitations and project outputs will be documented and shared on this page.</p></div></li></ol>
+    </div></section>
+
+    <section class="documents-section section-pad" id="documents" aria-labelledby="documents-title"><div class="container documents-layout"><div class="reveal"><p class="eyebrow"><span>06 / </span><span data-i18n="documentsEyebrow">PROJECT ARCHIVE</span></p><h2 id="documents-title" data-i18n="documentsTitle">Follow the work</h2><p class="section-intro" data-i18n="documentsIntro">Documents and references will be shared here as the research progresses. No project documents have been shared on this site yet.</p><span class="document-sculpture" aria-hidden="true"><i></i><i></i><i></i><b>K</b></span></div>
+      <ul class="document-list"><li><span class="document-number">01</span><h3 data-i18n="document1Title">Project proposal</h3><span class="document-state" data-state="draft" data-i18n="documentDraftStatus">In draft</span></li><li><span class="document-number">02</span><h3 data-i18n="document2Title">Technical reports</h3><span class="document-state" data-state="planned" data-i18n="documentPlannedStatus">Planned</span></li><li><span class="document-number">03</span><h3 data-i18n="document3Title">Presentations</h3><span class="document-state" data-state="planned" data-i18n="documentPlannedStatus">Planned</span></li><li><span class="document-number">04</span><h3 data-i18n="document4Title">References</h3><span class="document-state" data-state="unpublished" data-i18n="documentUnpublishedStatus">Not yet shared</span></li></ul>
+    </div></section>
+
+    <section class="team-section section-pad" id="team" aria-labelledby="team-title"><div class="container"><div class="team-heading reveal"><p class="eyebrow"><span>07 / </span><span data-i18n="navTeam">Team</span></p><h2 id="team-title" data-i18n="teamTitle">The KESKİN Team</h2></div><div class="team-grid"><article class="team-person reveal"><span class="person-initials" aria-hidden="true">BA</span><h3 data-i18n="teamMember1">Busenur Arlı</h3><p data-i18n="teamRole">Research team</p></article><article class="team-person reveal"><span class="person-initials" aria-hidden="true">İÖ</span><h3 data-i18n="teamMember2">İlke Özçendek</h3><p data-i18n="teamRole">Research team</p></article><article class="team-person reveal"><span class="person-initials" aria-hidden="true">ZE</span><h3 data-i18n="teamMember3">Zeynep Ersoy</h3><p data-i18n="teamRole">Research team</p></article></div><div class="adviser"><span data-i18n="adviserLabel">Project adviser</span><strong data-i18n="adviserName">Prof. Dr. Gökçe Nur Yılmaz</strong><span data-i18n="footerCourse">TED University · CMPE491 · 2026–27</span></div></div></section>
+
+    <section class="faq-section section-pad" id="faq" aria-labelledby="faq-title"><div class="container faq-layout"><div class="faq-heading"><p class="eyebrow"><span>08 / </span><span data-i18n="navFaq">Questions</span></p><h2 id="faq-title" data-i18n="faqTitle">About KESKİN</h2><p class="section-intro" data-i18n="faqIntro">The research idea, where we are today, and how to follow the work.</p></div><div class="faq-list"><details open><summary><span class="faq-number" aria-hidden="true">01</span><span class="faq-question" data-i18n="faq1Question">What is the difference between super-resolution and object detection?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p data-i18n="faq1Answer">Super-resolution aims to produce a higher-resolution image from a low-resolution input. Object detection aims to find and locate objects in an image. KESKİN investigates how the first process contributes to the second task.</p></details><details><summary><span class="faq-number" aria-hidden="true">02</span><span class="faq-question" data-i18n="faq2Question">What stage is the project at?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p data-i18n="faq2Answer">The project proposal is being prepared. The dataset and models have not been finalised, and no experimental results have been published. The method, documents and evaluations will be updated as the research progresses.</p></details><details><summary><span class="faq-number" aria-hidden="true">03</span><span class="faq-question" data-i18n="faq3Question">Where can I find reports and references?</span><span class="faq-toggle" aria-hidden="true">+</span></summary><p data-i18n="faq3Answer">Published materials will be available in the Documents section. The project proposal is currently in draft; technical reports and presentations are planned for later stages. References have not yet been shared on this website.</p></details></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><span class="wordmark">KESKİN</span><p data-i18n="footerTopic">Improving Object Detection Performance in SAR Imagery Using Super-Resolution Techniques</p><a class="back-top" href="#top"><span class="back-top-label" data-i18n="footerBackToTop">Back to top</span><span class="back-top-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m-6 6 6-6 6 6"/><path d="M12 19V5m-6 6 6-6 6 6"/></svg></span></a></div><div class="footer-bottom"><span data-i18n="footerCourse">TED University · CMPE491 · 2026–27</span><span>SAR / SUPER-RESOLUTION / DETECTION</span></div></div></footer>
+</body>
+</html>
