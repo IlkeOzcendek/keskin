@@ -80,11 +80,10 @@ window.KESKIN_COPY = {
     document3Title: "Proje iş listesi (Backlog)",
     documentPlannedStatus: "Planlanıyor",
     roadmapCompleted: "Tamamlandı",
-    documentPreparationStatus: "Hazırlanıyor",
     documentOpen: "PDF’yi aç",
     documentProposalDate: "16 Ekim 2026",
     documentSpecificationsDate: "23 Ekim 2026",
-    documentBacklogDue: "Son teslim: 23 Ekim 2026",
+    documentBacklogDate: "23 Ekim 2026",
     documentsUpdated: "Son güncelleme",
     documentsUpcoming: "Sonraki Backlog sürümleri",
     documentBacklogV2Date: "20 Kasım 2026",
@@ -103,7 +102,7 @@ window.KESKIN_COPY = {
     faq2Question: "Proje şu anda hangi aşamada?",
     faq2Answer: "Proje önerisi ve spesifikasyonlar tamamlanıp teslim edildi. Değerlendirme düzeni tanımlandı; HRSID ve SSDD veri kümeleri, EDSR ve SRGAN süper çözünürlük modelleri aday olarak değerlendiriliyor. Nihai seçimler ve nesne tespit modeli henüz kesinleşmedi. Sıradaki adım fizibilite denemesi ve analiz raporu; paylaşılmış deney sonucu bulunmuyor.",
     faq3Question: "Raporlara ve proje belgelerine nereden ulaşabilirim?",
-    faq3Answer: "Proje önerisi ve spesifikasyonların PDF sürümlerine Belgeler bölümünden ulaşabilirsiniz. Backlog v1.0 hazırlanıyor. Yeni belgeler ve sonraki sürümler tarih ve sürüm bilgisiyle burada yayımlanacak; eski sürümler erişilebilir kalacak.",
+    faq3Answer: "Proje önerisi, spesifikasyonlar ve Backlog v1.0’ın PDF sürümlerine Belgeler bölümünden ulaşabilirsiniz. Yeni belgeler ve sonraki sürümler tarih ve sürüm bilgisiyle burada yayımlanacak; eski sürümler erişilebilir kalacak.",
     footerTopic: "Süper Çözünürlük Teknikleri ile SAR Görüntülerinde Tespit Başarımının Artırılması",
     footerDescription: "SAR görüntülerinden nesne tespitine uzanan bir bitirme projesi araştırması.",
     footerCourse: "TED Üniversitesi · CMPE491 · 2026–27",
@@ -190,11 +189,10 @@ window.KESKIN_COPY = {
     document3Title: "Project backlog",
     documentPlannedStatus: "Planned",
     roadmapCompleted: "Completed",
-    documentPreparationStatus: "In preparation",
     documentOpen: "Open PDF",
     documentProposalDate: "16 October 2026",
     documentSpecificationsDate: "23 October 2026",
-    documentBacklogDue: "Due: 23 October 2026",
+    documentBacklogDate: "23 October 2026",
     documentsUpdated: "Last updated",
     documentsUpcoming: "Upcoming backlog versions",
     documentBacklogV2Date: "20 November 2026",
@@ -213,7 +211,7 @@ window.KESKIN_COPY = {
     faq2Question: "What stage is the project at?",
     faq2Answer: "The project proposal and specifications have been completed and submitted. The evaluation protocol is defined; HRSID and SSDD are candidate datasets, and EDSR and SRGAN are candidate super-resolution models. The final selections and object detector are still undecided. Next are the feasibility pilot and analysis report; no experimental results have been published.",
     faq3Question: "Where can I find reports and project documents?",
-    faq3Answer: "PDF versions of the project proposal and specifications are available in the Documents section. Backlog v1.0 is in preparation. New documents and later versions will be published here with their dates and version numbers; earlier versions will remain accessible.",
+    faq3Answer: "PDF versions of the project proposal, specifications and Backlog v1.0 are available in the Documents section. New documents and later versions will be published here with their dates and version numbers; earlier versions will remain accessible.",
     footerTopic: "Improving Object Detection Performance in SAR Imagery Using Super-Resolution Techniques",
     footerDescription: "A capstone research project connecting SAR imagery and object detection.",
     footerCourse: "TED University · CMPE491 · 2026–27",
@@ -227,7 +225,7 @@ Object.assign(window.KESKIN_COPY.tr, {
   contextsEyebrow: "YENİ SORULAR",
   context1Alt: "Temsili liman görüntüsünde küçük bir geminin yakın planı.",
   context2Alt: "Birden fazla gemi, rıhtım ve yapı içeren temsili liman sahnesi.",
-  documentsIntro: "Proje önerisi ve spesifikasyonlara buradan ulaşabilirsiniz. Backlog hazırlanıyor; yayımlanan her sürüm bu arşivde korunacak.",
+  documentsIntro: "Proje önerisi, spesifikasyonlar ve Backlog v1.0’a buradan ulaşabilirsiniz. Yayımlanan her sürüm bu arşivde korunacak.",
   teamRole: "Araştırma ekibi"
 });
 Object.assign(window.KESKIN_COPY.en, {
@@ -237,7 +235,7 @@ Object.assign(window.KESKIN_COPY.en, {
   contextsEyebrow: "NEW QUESTIONS",
   context1Alt: "A close-up of a small ship in an illustrative harbor scene.",
   context2Alt: "An illustrative harbor scene with several ships, piers and structures.",
-  documentsIntro: "The project proposal and specifications are available here. The backlog is in preparation; each published version will be preserved in this archive.",
+  documentsIntro: "The project proposal, specifications and Backlog v1.0 are available here. Each published version will be preserved in this archive.",
   teamRole: "Research team"
 });
 

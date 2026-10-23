@@ -68,7 +68,7 @@ The evaluation protocol is defined in the submitted specifications. HRSID/SSDD a
 | :--- | :--- | :--- | :--- |
 | Project proposal | v1.0 | 16 October 2026 | [Open PDF](documents/keskin-project-proposal-v1.0.pdf) |
 | Project specifications | v1.0 | 23 October 2026 | [Open PDF](documents/keskin-project-specifications-v1.0.pdf) |
-| Project backlog | v1.0 | Due 23 October 2026 | In preparation |
+| Project backlog | v1.0 | 23 October 2026 | [Open PDF](documents/keskin-backlog-v1.0.pdf) |
 | Project backlog | v2.0 | Due 20 November 2026 | Planned |
 | Project backlog | v3.0 | Due 31 December 2026 | Planned |
 
