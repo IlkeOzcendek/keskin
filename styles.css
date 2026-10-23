@@ -654,3 +654,52 @@
  .document-list .document-number{grid-row:1/3}
  .document-list .document-link,.document-list .document-state{grid-column:2;justify-self:start}
 }
+
+/* Give the research question its own reading space beside the harbor image. */
+.question-section{min-height:620px}
+.question-visual{width:43%}
+.question-visual>img{
+  object-position:65% 40%;
+  mask-image:linear-gradient(to right,#000 45%,#0009 68%,transparent 100%);
+  opacity:.68;
+}
+.question-layout{
+  grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);
+  gap:clamp(64px,7vw,104px);min-height:620px;
+}
+.question-copy{min-width:0;padding:96px 0;max-width:660px}
+.question-copy .eyebrow{margin-bottom:26px}
+.question-copy h2{font-size:clamp(34px,3.1vw,45px);line-height:1.24;max-width:650px}
+.question-copy>p:not(.eyebrow):not(.image-note){
+  max-width:560px;margin-top:30px;font-size:16px;line-height:1.9;text-wrap:pretty;
+}
+.question-copy .blue-rule{margin-top:32px}
+.question-copy .image-note{max-width:480px;font-size:12px;line-height:1.8;margin-top:24px}
+.question-crop{right:28%;top:-28px}
+.question-marker{left:53%;top:36%}
+@media(max-width:980px){
+  .question-section{min-height:0;padding-top:290px;scroll-margin-top:0}
+  .question-visual{width:100%;height:290px;bottom:auto;overflow:hidden}
+  .question-visual>img{
+    object-position:65% 38%;opacity:.6;
+    mask-image:linear-gradient(to bottom,#000 30%,#0008 62%,transparent 100%);
+  }
+  .question-layout{display:block;min-height:0}
+  .question-copy{max-width:660px;margin-inline:auto;padding:26px 0 76px}
+  .question-copy h2{font-size:clamp(34px,4.5vw,42px)}
+  .question-copy>p:not(.eyebrow):not(.image-note){max-width:600px}
+  .question-crop{width:140px;height:148px;right:18%;top:26px;transform:rotate(4deg)}
+  .question-marker{width:12%;height:24%;left:56%;top:38%}
+}
+@media(max-width:680px){
+  .question-section{padding-top:230px}
+  .question-visual{height:230px}
+  .question-copy{padding:24px 0 60px}
+  .question-copy .eyebrow{margin-bottom:22px}
+  .question-copy h2{font-size:clamp(29px,7.6vw,38px);line-height:1.26}
+  .question-copy>p:not(.eyebrow):not(.image-note){margin-top:26px;font-size:15px;line-height:1.85}
+  .question-copy .blue-rule{margin-top:28px}
+  .question-copy .image-note{margin-top:22px}
+  .question-crop{width:118px;height:124px;right:15%;top:22px}
+  .question-marker{width:16%;height:22%;left:51%;top:42%}
+}
