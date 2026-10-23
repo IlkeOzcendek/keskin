@@ -223,8 +223,8 @@ Object.assign(window.KESKIN_COPY.tr, {
   visualDisclaimerShort: "Görsel temsilîdir; gerçek SAR verisi veya model sonucu değildir.",
   questionEyebrow: "ARAŞTIRMA SORUSU",
   contextsEyebrow: "YENİ SORULAR",
-  context1Alt: "Temsili liman görüntüsünde küçük bir geminin yakın planı.",
-  context2Alt: "Birden fazla gemi, rıhtım ve yapı içeren temsili liman sahnesi.",
+  context1Alt: "Temsili liman görüntüsünde küçük bir nesnenin yakın planı.",
+  context2Alt: "Birden fazla nesne, rıhtım ve yapı içeren temsili liman sahnesi.",
   documentsIntro: "Proje önerisi, spesifikasyonlar ve Backlog v1.0’a buradan ulaşabilirsiniz. Yayımlanan her sürüm bu arşivde korunacak.",
   teamRole: "Araştırma ekibi"
 });
@@ -233,8 +233,8 @@ Object.assign(window.KESKIN_COPY.en, {
   visualDisclaimerShort: "Illustrative imagery; not actual SAR data or a model output.",
   questionEyebrow: "RESEARCH QUESTION",
   contextsEyebrow: "NEW QUESTIONS",
-  context1Alt: "A close-up of a small ship in an illustrative harbor scene.",
-  context2Alt: "An illustrative harbor scene with several ships, piers and structures.",
+  context1Alt: "A close-up of a small object in an illustrative harbor scene.",
+  context2Alt: "An illustrative harbor scene with several objects, piers and structures.",
   documentsIntro: "The project proposal, specifications and Backlog v1.0 are available here. Each published version will be preserved in this archive.",
   teamRole: "Research team"
 });
