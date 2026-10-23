@@ -26,7 +26,7 @@
 
 KESKİN investigates the relationship between **super-resolution** and **object detection** in synthetic aperture radar (SAR) imagery. We want to understand when additional image detail helps a detector find and locate objects, where it offers limited benefit, and what tradeoffs emerge.
 
-Developed at **TED University** for **CMPE491 · 2026–27**, the project is currently at the proposal stage. This repository hosts its public website; research code and experimental results have not been published here yet.
+Developed at **TED University** for **CMPE491 · 2026–27**, the project has completed and submitted its proposal and specifications. The current stage is feasibility and experiment design. This repository hosts the public website and project documents; research code and experimental results have not been published here yet.
 
 ## From imagery to evidence
 
@@ -37,8 +37,8 @@ Developed at **TED University** for **CMPE491 · 2026–27**, the project is cur
   <img src="./assets/readme/research-flow.svg" width="100%" alt="Proposed comparison: the same SAR input is evaluated through direct object detection and through super-resolution followed by detection. Both detection paths are compared; image quality is assessed separately." />
 </picture>
 
-1. **Prepare the data** — Review open SAR sources, select a suitable dataset, and define image pairs and the evaluation setup.
-2. **Increase resolution** — Compare at least two deep learning super-resolution architectures, selected after the literature review.
+1. **Prepare the data** — Assess HRSID and SSDD as candidate datasets and prepare image pairs using the selected data.
+2. **Increase resolution** — Compare at least two deep learning super-resolution architectures, with EDSR and SRGAN being assessed as candidates.
 3. **Detect objects** — Evaluate low-resolution and super-resolved inputs within the same detection evaluation setup.
 4. **Measure the effect** — Examine image quality and detection performance separately, then report their relationship and limitations.
 
@@ -55,12 +55,24 @@ We are particularly interested in **small objects**, where useful detail is limi
 
 | Stage | Focus | Status |
 | :--- | :--- | :--- |
-| **01 · Project proposal** | Research question, scope, and initial references | **In preparation** |
-| **02 · Experiment design** | Dataset, architectures, and evaluation measures | Planned |
+| **01 · Proposal & specifications** | Research scope, requirements, and evaluation protocol | **Completed and submitted** |
+| **02 · Feasibility & experiment design** | Candidate dataset/model pilot and analysis report | **Current stage** |
 | **03 · Implementation** | Super-resolution and detection comparisons | Planned |
 | **04 · Analysis & sharing** | Findings, limitations, and project outputs | Planned |
 
-Dataset, model, and metric choices have not been finalized. No experimental results have been published. The website’s Documents section will host materials as they become available.
+The evaluation protocol is defined in the submitted specifications. HRSID/SSDD and EDSR/SRGAN remain dataset and super-resolution model candidates; the final selections and object detector are undecided. A feasibility pilot and the analysis report are next. No experimental results have been published.
+
+### Project document archive
+
+| Document | Version | Date | Availability |
+| :--- | :--- | :--- | :--- |
+| Project proposal | v1.0 | 16 October 2026 | [Open PDF](documents/keskin-project-proposal-v1.0.pdf) |
+| Project specifications | v1.0 | 23 October 2026 | [Open PDF](documents/keskin-project-specifications-v1.0.pdf) |
+| Project backlog | v1.0 | Due 23 October 2026 | In preparation |
+| Project backlog | v2.0 | Due 20 November 2026 | Planned |
+| Project backlog | v3.0 | Due 31 December 2026 | Planned |
+
+Published versions remain available at their own PDF links. Public copies omit identity numbers. Last updated: **23 October 2026**.
 
 ## The website
 
@@ -101,6 +113,7 @@ Open `index.html` in your browser. No package installation or build step is requ
 | [`content.js`](content.js) | English and Turkish content |
 | [`styles.css`](styles.css) | Typography, themes, layout, and motion |
 | [`app.js`](app.js) | Language, theme, menu, and interactive comparisons |
+| [`documents/`](documents/) | Public project PDFs, preserved by version |
 | [`assets/`](assets/) | Website imagery and favicon |
 | [`assets/readme/`](assets/readme/) | Original animated SVGs and website preview |
 | [`.nojekyll`](.nojekyll) | Static publishing configuration for GitHub Pages |

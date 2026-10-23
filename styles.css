@@ -347,7 +347,7 @@
   .context-choice .choice-arrow { transform: none !important; }
 }
 
-/* Research stages: one current step, followed by three planned stages. */
+/* Research stages: completed documents, one current step, and later stages. */
 .roadmap-layout{align-items:start;gap:clamp(40px,7vw,112px)}
 .roadmap-list{position:relative;min-width:0}
 .roadmap-list li,.roadmap-list li:first-child{grid-template-columns:44px minmax(0,1fr);gap:22px;padding:26px 22px;isolation:isolate;transition:opacity 650ms ease var(--road-delay,0ms),translate 700ms cubic-bezier(.22,1,.36,1) var(--road-delay,0ms)}
@@ -610,6 +610,47 @@
  #main-nav a[aria-current] .nav-arrow{color:var(--blue)}
 }
 @media(max-width:680px){
- .primary-link .round-arrow .ui-icon{width:21px;height:21px}
+.primary-link .round-arrow .ui-icon{width:21px;height:21px}
  .compare-grip .ui-icon{width:26px;height:26px}
+}
+
+/* Versioned document archive. */
+.documents-layout{align-items:start}
+.documents-updated{margin-top:22px;color:var(--muted);font-size:11px;line-height:1.8}
+.document-archive{min-width:0}
+.document-list li{grid-template-columns:26px minmax(0,1fr) auto;gap:18px;padding:25px 0}
+.document-list .document-number{grid-row:auto;align-self:start;padding-top:5px}
+.document-list h3{font-size:16px;line-height:1.5}
+.document-meta{display:flex;flex-wrap:wrap;gap:5px 9px;margin-top:8px;color:var(--muted);font-size:11px;line-height:1.7;font-variant-numeric:tabular-nums}
+.document-list .document-state{grid-column:auto;justify-self:end;font-size:10px}
+.document-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:7px 10px;border:1px solid var(--line);border-radius:7px;color:var(--blue);font-size:11px;font-weight:650;white-space:nowrap;transition:background 180ms ease,border-color 180ms ease}
+.document-link .ui-icon{width:16px;height:16px}
+.document-link:hover{border-color:var(--blue);background:var(--wash)}
+.document-link:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.document-state[data-state=preparation]{color:var(--blue);background:var(--wash)}
+.documents-upcoming{margin-top:29px}
+.documents-upcoming h3{font-family:var(--body);font-size:12px;font-weight:650;line-height:1.7;color:var(--ink)}
+.document-upcoming-list{list-style:none;margin-top:12px}
+.document-upcoming-list li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:14px;padding:8px 0;color:var(--muted);font-size:11px;line-height:1.7;font-variant-numeric:tabular-nums}
+.document-upcoming-list li>span:last-child{font-size:10px}
+.document-archive-note{margin-top:15px;color:var(--muted);font-size:11px;line-height:1.8}
+.roadmap-list .completed .road-number{border-color:color-mix(in srgb,var(--blue) 45%,var(--line));color:var(--blue)}
+.roadmap-orbit-node-completed{border-color:color-mix(in srgb,var(--blue) 45%,var(--line));color:var(--blue)}
+@media(max-width:980px){
+ .document-list li{grid-template-columns:22px minmax(0,1fr);gap:10px 14px}
+ .document-list .document-number{grid-row:1/3}
+ .document-list .document-link,.document-list .document-state{grid-column:2;justify-self:start}
+}
+@media(max-width:680px){
+ .document-list{margin-top:30px}
+ .document-list li{grid-template-columns:22px minmax(0,1fr) auto;gap:14px}
+ .document-list .document-number{grid-row:auto}
+ .document-list .document-link,.document-list .document-state{grid-column:auto;justify-self:end}
+ .document-list h3{font-size:15px}
+ .document-link{padding-inline:9px}
+}
+@media(max-width:420px){
+ .document-list li{grid-template-columns:20px minmax(0,1fr);gap:10px 12px}
+ .document-list .document-number{grid-row:1/3}
+ .document-list .document-link,.document-list .document-state{grid-column:2;justify-self:start}
 }
