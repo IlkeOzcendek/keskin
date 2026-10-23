@@ -37,7 +37,7 @@ Developed at **TED University** for **CMPE491 · 2026–27**, the project has co
   <img src="./assets/readme/research-flow.svg" width="100%" alt="Proposed comparison: the same SAR input is evaluated through direct object detection and through super-resolution followed by detection. Both detection paths are compared; image quality is assessed separately." />
 </picture>
 
-1. **Prepare the data** — Assess HRSID and SSDD as candidate datasets and prepare image pairs using the selected data.
+1. **Prepare the data** — Assess candidate datasets for their suitability to the project and prepare image pairs using the selected data.
 2. **Increase resolution** — Compare at least two deep learning super-resolution architectures, with EDSR and SRGAN being assessed as candidates.
 3. **Detect objects** — Evaluate low-resolution and super-resolved inputs within the same detection evaluation setup.
 4. **Measure the effect** — Examine image quality and detection performance separately, then report their relationship and limitations.
@@ -60,7 +60,7 @@ We are particularly interested in **small objects**, where useful detail is limi
 | **03 · Implementation** | Super-resolution and detection comparisons | Planned |
 | **04 · Analysis & sharing** | Findings, limitations, and project outputs | Planned |
 
-The evaluation protocol is defined in the submitted specifications. HRSID/SSDD and EDSR/SRGAN remain dataset and super-resolution model candidates; the final selections and object detector are undecided. A feasibility pilot and the analysis report are next. No experimental results have been published.
+The evaluation protocol is defined in the submitted specifications. The dataset selection remains open. EDSR and SRGAN are candidate super-resolution models; the final models and object detector are undecided. A feasibility pilot and the analysis report are next. No experimental results have been published.
 
 ### Project document archive
 
