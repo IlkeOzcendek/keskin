@@ -703,3 +703,37 @@
   .question-crop{width:118px;height:124px;right:15%;top:22px}
   .question-marker{width:16%;height:22%;left:51%;top:42%}
 }
+
+/* Light surfaces share the same palette, including the question and footer. */
+:root[data-theme=light]{--blue:#125be0}
+:root[data-theme=light] .question-section{background:var(--wash);color:var(--ink)}
+:root[data-theme=light] .question-copy .eyebrow{color:var(--blue)}
+:root[data-theme=light] .question-copy>p:not(.eyebrow):not(.image-note),
+:root[data-theme=light] .question-copy .image-note{color:var(--muted)}
+:root[data-theme=light] .question-copy .blue-rule{background:var(--blue)}
+:root[data-theme=light] .question-visual>img{opacity:.48}
+:root[data-theme=light] .question-crop{border-color:var(--surface);box-shadow:0 12px 30px #10273e24}
+:root[data-theme=light] .question-marker{border-color:var(--blue)}
+:root[data-theme=light] .site-footer{background:var(--wash);color:var(--ink);border-top:1px solid var(--line)}
+:root[data-theme=light] .footer-top p,
+:root[data-theme=light] .footer-bottom{color:var(--muted)}
+:root[data-theme=light] .footer-bottom{border-color:var(--line)}
+:root[data-theme=light] .back-top{
+  background:var(--surface);color:var(--blue);
+  border-color:color-mix(in srgb,var(--blue) 25%,var(--line));
+}
+:root[data-theme=light] .back-top>span.back-top-icon{background:var(--wash);color:var(--blue)}
+:root[data-theme=light] .back-top:focus-visible{outline-color:var(--blue);border-color:var(--blue)}
+:root[data-theme=light] .back-top:focus-visible .back-top-icon{background:var(--blue);color:var(--surface)}
+@media(hover:hover) and (pointer:fine){
+  :root[data-theme=light] .back-top:hover{
+    background:color-mix(in srgb,var(--blue) 5%,var(--surface));border-color:var(--blue);
+    box-shadow:0 0 0 4px color-mix(in srgb,var(--blue) 7%,transparent);
+  }
+  :root[data-theme=light] .back-top:hover .back-top-icon{background:var(--blue);color:var(--surface)}
+}
+:root[data-theme=light] .back-top:active{background:color-mix(in srgb,var(--blue) 10%,var(--surface))}
+@media(max-width:980px){
+  :root[data-theme=light] #main-nav{box-shadow:0 18px 50px #10273e24}
+  :root[data-theme=light] #menu-backdrop{background:#10273e38}
+}
